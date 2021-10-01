@@ -3,10 +3,40 @@
   <head>
     <title>birthday</title>
     <meta charset="UTF-8" />
+    <style>
+    .container{
+      width: 60%;
+      height: 50vh;
+      margin: 50px auto;
+      text-align: center;
+      background-color:rgb(241, 232, 232);
+    }
+    h1{
+      color: #DC2626;
+      padding: 1rem;
+    }
+    input{
+      margin: 2rem;
+    }
+    button{
+      padding: 6px;
+      color: #DC2626;
+      border: 1px solid #DC2626;
+      border-radius: 8px;
+      letter-spacing: 2px;
+      margin-top: 3rem;
+    }
+    #output-div{
+      font-weight: bolder;
+      letter-spacing: 2px;
+      color: darkblue;
+      font-size: larger;
+    }
+    </style>
   </head>
 
   <body>
-    <div id="app"></div>
+    <div class="container">
 
     <h1>Is your birthday lucky ?</h1>
     <hr />
@@ -14,6 +44,7 @@
        <input type="text" id="lucky" />
     <div id="output-div"></div>
     <button onclick="isLucky();">submit</button>
+    </div>
   </body>
   <script src="birth.js"></script>
 </html>
