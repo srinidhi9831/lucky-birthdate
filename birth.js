@@ -1,3 +1,15 @@
+var button = document.querySelector("#button");
+var db=document.querySelector("#date")
+var luckyNumber=document.querySelector("#lucky");
+var output=document.querySelector("#output-div");
+
+button.addEventListener("click",eventHandler);
+
+function eventHandler(){
+   if(validate(db.value,luckyNumber.value)) 
+     isLucky(sum(db.value),luckyNumber.value);
+}
+
 function sum(date){
     var newDate=0;
     for(var i=0;i<date.length;i++)
@@ -10,15 +22,28 @@ function sum(date){
     return newDate;
 }
 
-function isLucky(){
+function isLucky(sum,luckyNumber){
     
-    var db=document.getElementById("date").value;
-    var luckyNumber=parseInt(document.getElementById("lucky").value);
-    if(sum(db)%luckyNumber==0)
+   
+    if(sum%luckyNumber==0)
     {
-        document.getElementById("output-div").innerText="you got a LUCKY birth date!!";
+        show("you got a lucky birth date");
     }
     else{
-        document.getElementById("output-div").innerText="oops not Lucky!!";
+        show("oops!! NOT LUCKY")
+    }
+}
+
+function show(message){
+    output.innerText= `${message}`;
+}
+
+function validate(date,luckyNumber){
+    if(date=="" || luckyNumber==""){
+       alert("please fill out all details");
+       return false;
+    }
+    else{
+        return true;
     }
 }
