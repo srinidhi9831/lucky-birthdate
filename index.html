@@ -9,14 +9,14 @@
       height: 50%;
       margin: 50px auto;
       text-align: center;
-      background-color:rgb(241, 232, 232);
     }
     h1{
-      color: #DC2626;
+      color: white;
       padding: 1rem;
     }
     input{
       margin: 2rem;
+      border:1px solid tomato;
     }
     button{
       padding: 6px;
@@ -33,14 +33,49 @@
       color: darkblue;
       font-size: larger;
     }
+    .footer{
+    background-color:   
+    #111827;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: white;
+    border-bottom-right-radius:1rem;
+    margin-top: 25vh;
+}
+
+.footer .link{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.footer ul{
+    padding-inline-start: 0px;
+}
+li{
+  display: inline;
+  padding: 1rem;
+  margin: 1rem;
+  
+}
+.footer-header{
+  margin: 1rem;
+  padding: 1rem;
+ 
+}
+
+header{
+  width: 100%;
+  height: 15vh;
+  background-color:tomato;
+  text-align: center;
+}
     </style>
   </head>
 
   <body>
+    <header><h1>Is your birthday lucky ?</h1></header>
     <div class="container">
-
-    <h1>Is your birthday lucky ?</h1>
-    <hr />
     enter date of birth:<input type="date" id="date"/><br>
      enter lucky number
        <input type="number" id="lucky" />
@@ -48,5 +83,24 @@
     <button id="button">submit</button>
     </div>
   </body>
+
+  <footer class="footer">
+    <div class="footer-header">connect with me</div>
+    <ul>
+        <li class>
+           <a class="link "href="https://github.com/srinidhi9831"> github</a>
+        </li>
+        <li>
+          <a class="link "href="https://twitter.com/srinidh9831"> twitter</a>
+       </li>
+       <li>
+          <a class="link "href="https://www.linkedin.com/in/sri-nidhi-bab322222/"> linkedin</a>
+       </li>
+       <li>
+        <a class="link "href="https://mycompleteportfolio.netlify.app/"> myPortfolio</a>
+     </li>
+    </ul> <br> <br>
+    <small>privacy notice : we are not storing any of your data</small>
+</footer>
   <script src="birth.js"></script>
 </html>
