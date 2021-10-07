@@ -43,6 +43,10 @@ function validate(date,luckyNumber){
        alert("please fill out all details");
        return false;
     }
+    else if(luckyNumber<0){
+        alert("Lucky number cannot be less than zero");
+        return false;
+     }
     else{
         return true;
     }
